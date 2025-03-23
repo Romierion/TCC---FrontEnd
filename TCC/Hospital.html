@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Minha Tipagem Sanguínea </title>
+    <link rel="icon" href="img/Bolsa.png">
+    <link rel="stylesheet" href="Hospital.css">
+</head>
+
+<div class="container-input">
+    <input id="slider" class="slider" type="range" min="5" max="15" style="display: none;">
+</div>
+
+<body>
+    <div id="div">
+        <div class="div1">
+            <div class="janela1">
+                <div id="conteudo1" class="conteudo1">
+                    <button class="cor" onclick="alterarCor('black')">Escuro</button>
+                    <button class="cor1" onclick="alterarCor('white')">Claro</button>
+                    <a class="conta" href="Conta.html">Conta</a>
+
+                    <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
+                    <form class="formulario" onsubmit="event.preventDefault(); resultar();">
+                        <input type="text" class="input" id="mae" name="mae" placeholder="Nome da mãe" required>
+                        <input type="text" class="input" id="tipoMae" name="tipoMae" placeholder="Tipo sanguíneo da mãe"
+                            required>
+                        <input type="text" class="input" id="rhMae" name="rhMae" placeholder="Fator RH da mãe" required>
+                        <input type="text" class="input" id="pai" name="pai" placeholder="Nome do pai" required>
+                        <input type="text" class="input" id="tipoPai" name="tipoPai" placeholder="Tipo sanguíneo do pai"
+                            required>
+                        <input type="text" class="input" id="rhPai" name="rhPai" placeholder="Fator RH do pai" required>
+                        <input type="text" class="input" id="crianca" name="crianca" placeholder="Nome da criança">
+                        <button type="submit" class="incluir" id="incluir" name="incluir"> Incluir </button><br>
+                    </form>
+                    <form class="formulario" onsubmit="event.preventDefault(); resultar();">
+                        <input type="text" class="input" id="prococolo" name="prococolo" placeholder="10013" required>
+                        <button type="submit" class="buscar" id="buscar" name="buscar"> Buscar </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="div2">
+            <div class="janela2">
+                <div id="conteudo2" class="conteudo" style="display: none;">
+                    
+                    <div id="container-protocolo" onclick="copiarProtocolo()" class="container-protocolo hide">
+                        <input id="slider" class="slider" type="range" min="5" max="15" style="display: none;">
+                        <a class="title">Protocolo:&nbsp;</a>
+                        <a id="protocolo" class="protocolo"></a>
+                        <a class="tooltip">Clique no prococolo para copiar.</a>
+                    </div>
+
+                    <ul id="ul1" class="ul1" class="li11">
+                        <li class="li1">
+                            <p>Parentesco</p>
+                        </li>
+                        <li class="li1">
+                            <p>Nome</p>
+                        </li>
+                        <li class="li1">
+                            <p>Tipo sanguíneo</p>
+                        </li>
+                        <li class="li1">
+                            <p>Fator RH</p>
+                        </li>
+                        <button type="submit" id="salvarIMG" class="salvarIMG" onclick="gerarProtocolo()"><img class="img" src="img/Salvar.png" width="15px"></button>
+                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo()"> <b> SALVAR </b> </button>
+                        <hr class="hr">
+                        <button type="submit" class="deletarIMG"><img class="img" src="img/Deletar.png" width="10px"></button>
+                        <button type="submit" class="deletar"> <b> DELETAR </b> </button>
+                        <hr class="hr">
+                        <button type="submit" class="sair"> <b> SAIR </b> </button>
+                    </ul>
+                    <ul class="ul2">
+                        <li class="li2">
+                            <p>Mãe</p>
+                        </li>
+                        <li class="li2">
+                            <p id="mamae"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="tipagemMae"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="fatorRhMae"></p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="ul2">
+                        <li class="li2">
+                            <p>Pai</p>
+                        </li>
+                        <li class="li2">
+                            <p id="papai"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="tipagemPai"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="fatorRhPai"></p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="ul2">
+                        <li class="li2">
+                            <p>Filho(a)</p>
+                        </li>
+                        <li class="li2">
+                            <p id="criança"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="tipagemCriança"></p>
+                        </li>
+                        <li class="li2">
+                            <p id="fatorRhCriança"></p>
+                        </li>
+                    </ul>
+
+                    <div id="transfusão" style="display: none;">
+                        <div id="onoff" class="onoff">
+                            <input type="checkbox" class="toggle" id="onoff1">
+                            <label for="onoff1"></label>
+                            <p class="p">Deseja saber para quem poderá fazer ou receber transfusão de sangue?</p>
+                        </div>
+                    </div>
+
+                    <div id="doar" style="display: none;">
+                        <ul id="ul1" class="ul1">
+                            <li class="Tipagem">
+                                <p class="tipo">Tipagem</p>
+                            </li>
+                            <li class="tipagem1">
+                                <p id="doador" class="doador">Para quem pode doar</p>
+                            </li>
+                            <li class="tipagem1">
+                                <p id="doação" class="doação">De quem pode receber</p>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li class="tipagem2">
+                                <p id="tipo1" class="tipo1"> Se for O+</p>
+                            </li>
+                            <li class="tipagem3">
+                                <p id="doador1" class="doador1">O+</p>
+                            </li>
+                            <li class="tipagem4">
+                                <p id="doação1" class="doação1">O+</p>
+                            </li>
+                        </ul>
+                        <ul id="ul2" class="ul2">
+                            <li class="tipagem2">
+                                <p id="tipo1" class="tipo1">Se for A+</p>
+                            </li>
+                            <li class="tipagem3">
+                                <p id="doador1" class="doador1">A+</p>
+                            </li>
+                            <li class="tipagem4">
+                                <p id="doação1" class="doação1">A+</p>
+                            </li>
+                        </ul>
+                        <ul id="ul2" class="ul2">
+                            <li class="tipagem2">
+                                <p id="tipo1" class="tipo1">Se for B+</p>
+                            </li>
+                            <li class="tipagem3">
+                                <p id="doador1" class="doador1">B+</p>
+                            </li>
+                            <li class="tipagem4">
+                                <p id="doação1" class="doação1">B+</p>
+                            </li>
+                        </ul>
+                        <ul id="ul2" class="ul2">
+                            <li class="tipagem2">
+                                <p id="tipo1" class="tipo1">Se for AB+</p>
+                            </li>
+                            <li class="tipagem3">
+                                <p id="doador1" class="doador1">AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            </li>
+                            <li class="tipagem4">
+                                <p id="doação1" class="doação1">AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="previsao" style="display: none;">
+                        <div id="onoff1" class="onoff1">
+                            <input type="checkbox" class="toggle" id="onoff2">
+                            <label for="onoff2"></label>
+                            <p class="p">Deseja saber também a previsão do parto?</p>
+                        </div>
+                    </div>
+
+                    <form id="partos" style="display: none;">
+                        <ul class="ul1">
+                            <li class="parto">
+                                <label>Dia da última menstruação</label>
+                                <input type="number" min="1" max="31" id="diaMenstruacao" name="diaMenstruacao"
+                                    class="diaMenstruacao" required>
+                            </li>
+                            <li class="parto">
+                                <label>Mês da última menstruação</label>
+                                <input type="number" min="1" max="12" id="mesMenstruacao" name="mesMenstruacao"
+                                    class="mesMenstruacao" required>
+                            </li>
+                            <li class="parto">
+                                <label>Ano da última menstruação</label>
+                                <input type="number" id="anoMenstruacao" name="anoMenstruacao" class="anoMenstruacao"
+                                    required>
+                            </li>
+                            <button type="submit" id="prever" class="prever"> <b class="prever1">PREVISÃO</b></button>
+                        </ul>
+                        <ul class="ul2">
+                            <li>A previsão do parto é para o dia: <b>02/09/2025</b></li>
+                        </ul>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/TCC/Hospital.js"></script>
+</body>
+
+</html>
