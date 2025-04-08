@@ -110,27 +110,39 @@ body {
     text-align: center;
 }
 
-.input {
+.mae, .pai, .crianca, .numProtocol {
     text-align: center;
     padding: 8px;
-    margin: 6px;
     border-radius: 15px;
     font-size: medium;
+    border-color: rgba(137, 43, 226, 0.349);
 }
 
-.input:hover {
+.tipoMae, .rhMae, .tipoPai, .rhPai {
+    text-align: center;
+    padding: 8px;
+    border-radius: 15px;
+    font-size: medium;
+    width: 200px;
+    border-color: rgba(137, 43, 226, 0.349);
+}
+
+.diaMenstruacao, .mesMenstruacao, .anoMenstruacao{
+    text-align: center;
+    padding: 4px;
+    border-radius: 15px;
+    font-size: medium;
+    border-color: rgba(137, 43, 226, 0.349);
+}
+
+.mae:hover, .tipoMae:hover, .rhMae:hover, .pai:hover, .tipoPai:hover, .rhPai:hover, .crianca:hover, .numProtocol:hover {
     color: rgb(0, 190, 0);
     border-color: rgba(2, 175, 54, 0.603);
 }
 
-input {
-    padding: 5px;
-    margin: 1.5px;
-    border-color: rgba(137, 43, 226, 0.349);
-}
-
 .buscar,
-.incluir {
+.incluir, 
+.reset {
     margin-left: 10px;
     border-radius: 20px;
     padding: 3px;
