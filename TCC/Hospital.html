@@ -24,27 +24,29 @@
 
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
-                        <input type="text" class="input" id="mae" name="mae" placeholder="Nome da mãe" required>
-                        <input type="text" class="input" id="tipoMae" name="tipoMae" placeholder="Tipo sanguíneo da mãe"
-                            required>
-                        <input type="text" class="input" id="rhMae" name="rhMae" placeholder="Fator RH da mãe" required>
-                        <input type="text" class="input" id="pai" name="pai" placeholder="Nome do pai" required>
-                        <input type="text" class="input" id="tipoPai" name="tipoPai" placeholder="Tipo sanguíneo do pai"
-                            required>
-                        <input type="text" class="input" id="rhPai" name="rhPai" placeholder="Fator RH do pai" required>
-                        <input type="text" class="input" id="crianca" name="crianca" placeholder="Nome da criança">
-                        <button type="submit" class="incluir" id="incluir" name="incluir"> Incluir </button><br>
+                        <input type="text" class="mae" id="mae" name="mae" placeholder="Nome da mãe" required>
+                        <input type="text" class="tipoMae" id="tipoMae" name="tipoMae"
+                            placeholder="Tipo sanguíneo da mãe" required>
+                        <input type="text" class="rhMae" id="rhMae" name="rhMae" placeholder="Fator RH da mãe" required>
+                        <input type="text" class="pai" id="pai" name="pai" placeholder="Nome do pai" required>
+                        <input type="text" class="tipoPai" id="tipoPai" name="tipoPai"
+                            placeholder="Tipo sanguíneo do pai" required>
+                        <input type="text" class="rhPai" id="rhPai" name="rhPai" placeholder="Fator RH do pai" required>
+                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança">
+                        <button type="submit" class="incluir" id="incluir" name="incluir"> Incluir </button>
+                        <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form><br>
                     <form id="formulario" class="formulario" onsubmit="event.preventDefault(); resultar();">
-                        <input type="text" class="input" id="numProtocol" name="numProtocol" minlength="5"
+                        <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5"
                             maxlength="15" placeholder="Buscar protocolo" required>
                         <button type="submit" class="buscar" id="buscar" name="buscar"> Buscar </button>
+                        <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form>
                 </div>
             </div>
         </div>
 
-        <div class="div2">
+        <div id="div2" class="div2">
             <div class="janela2">
                 <div id="conteudo2" class="conteudo" style="display: none;">
 
@@ -204,20 +206,20 @@
                         <ul class="ul1">
                             <li class="parto">
                                 <label>Dia da última menstruação</label>
-                                <input type="number" min="1" max="31" id="diaMenstruacao" name="diaMenstruacao"
-                                    class="diaMenstruacao" required>
+                                <input type="number" min="1" max="31" class="diaMenstruacao" id="diaMenstruacao"
+                                    name="diaMenstruacao" class="diaMenstruacao" required>
                             </li>
                             <li class="parto">
                                 <label>Mês da última menstruação</label>
-                                <input type="number" min="1" max="12" id="mesMenstruacao" name="mesMenstruacao"
-                                    class="mesMenstruacao" required>
+                                <input type="number" min="1" max="12" class="mesMenstruacao" id="mesMenstruacao"
+                                    name="mesMenstruacao" class="mesMenstruacao" required>
                             </li>
                             <li class="parto">
                                 <label>Ano da última menstruação</label>
-                                <input type="number" id="anoMenstruacao" name="anoMenstruacao" class="anoMenstruacao"
-                                    required>
+                                <input type="number" class="anoMenstruacao" id="anoMenstruacao" name="anoMenstruacao"
+                                    class="anoMenstruacao" required>
                             </li>
-                            <button type="submit" id="prever" class="prever"> <b class="prever1">PREVISÃO</b></button>
+                            <button type="submit" id="prever" class="prever"> <b class="prever1">PREVER</b></button>
                         </ul>
                         <ul class="ul2">
                             <li>A previsão do parto é para o dia: <b>02/09/2025</b></li>
