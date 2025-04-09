@@ -39,22 +39,12 @@
     color: rgb(243, 9, 227);
 }
 
-.input {
+.input, .numProtocolo{
     text-align: center;
-    padding: 8px;
-    margin: 6px;
     border: none;
     background: none;
     font-size: medium;
     width: 200px;
-}
-
-.numProtocolo {
-    border: none;
-    background: none;
-    width: 200px;
-    font-size: medium;
-    margin-bottom: 20px;
 }
 
 .numProtocolo::placeholder,
@@ -65,7 +55,7 @@
 body {
     background: linear-gradient(to bottom, rgba(191, 223, 250, 0.658), rgba(250, 191, 245, 0.658));
     background-attachment: fixed;
-    height: 100vh;
+    height: 125vh;
 }
 
 .titulo {
@@ -77,13 +67,6 @@ body {
 
 .formulario {
     text-align: center;
-}
-
-input {
-    padding: 5px;
-    margin: 1.5px;
-    border-color: rgba(137, 43, 226, 0.349);
-
 }
 
 .ul1 {
@@ -202,6 +185,9 @@ input {
     margin-bottom: 7px;
     margin-right: 20px;
     width: 35px;
+    padding: 5px;
+    margin: 4px;
+    border-color: rgba(137, 43, 226, 0.349);
 }
 
 .anoMenstruacao {
@@ -210,6 +196,9 @@ input {
     margin-bottom: 7px;
     margin-right: 20px;
     width: 50px;
+    padding: 5px;
+    margin: 4px;
+    border-color: rgba(137, 43, 226, 0.349);
 }
 
 .diaMenstruacao:hover,
