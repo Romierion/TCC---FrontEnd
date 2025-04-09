@@ -112,16 +112,19 @@ body {
 
 .mae, .pai, .crianca, .numProtocol {
     text-align: center;
-    padding: 8px;
+    padding: 7px;
     border-radius: 15px;
+    margin: 4px;
     font-size: medium;
     border-color: rgba(137, 43, 226, 0.349);
 }
 
+
 .tipoMae, .rhMae, .tipoPai, .rhPai {
     text-align: center;
-    padding: 8px;
+    padding: 7px;
     border-radius: 15px;
+    margin: 4px;
     font-size: medium;
     width: 200px;
     border-color: rgba(137, 43, 226, 0.349);
@@ -326,7 +329,7 @@ body {
 .div2 {
     margin-right: 60px;
     margin-left: 60px;
-    margin-top: -1.5%;
+    margin-top: 1.5%;
 }
 
 .janela1,
@@ -335,7 +338,6 @@ body {
     height: auto;
     /* overflow-x: auto; Barra de rolagem horizontal aparecerá automaticamente se necessário */
 }
-
 .conteudo1,
 .conteudo2 {
     width: 100%;
