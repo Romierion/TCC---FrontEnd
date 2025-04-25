@@ -110,9 +110,40 @@ body {
 
 .formulario {
     text-align: center;
+    border: groove;
+    border-radius: 20px 20px 0px 0px;
+    border-color:  rgba(137, 43, 226, 0.24);
+    border-width: 2px;
+    margin-left: 24.7%;
+    margin-right: 24.7%;
+    border-bottom: none;
+    padding-top: 5px
 }
 
-.mae, .pai, .crianca {
+.formulario1 {
+    text-align: center;
+    border: groove;
+    border-radius: 0px 0px 20px 20px;
+    border-color:  rgba(137, 43, 226, 0.24);
+    border-width: 2px;
+    margin-left: 24.7%;
+    margin-right: 24.7%;
+    margin-top: -18px;
+    border-top: none;
+}
+
+.crianca {
+    text-align: center;
+    padding: 7px;
+    border-radius: 15px;
+    margin: 4px;
+    margin-left: 25px;
+    font-size: medium;
+    border-color: rgba(137, 43, 226, 0.349);
+    width: 500px;
+}
+
+.mae, .pai  {
     text-align: center;
     padding: 7px;
     border-radius: 15px;
@@ -121,13 +152,14 @@ body {
     border-color: rgba(137, 43, 226, 0.349);
 }
 
-.tipoMae, .rhMae, .tipoPai, .rhPai {
+.tipoMae, .tipoPai {
     padding: 7px;
     border-radius: 15px;
     border-width: 2px;
     margin: 4px;
+    margin-left: 28px;
     font-size: medium;
-    width: 60px;
+    width: 213px;
     border-color: rgba(137, 43, 226, 0.349);
 }
 
@@ -144,18 +176,18 @@ body {
     border-color: rgba(2, 175, 54, 0.603);
 }
 
-.formulario1{
-    margin-top: -200px;
-    margin-left: 80%;
-    margin-bottom: 200px;
+select { /*Estiliza a tag option*/
+    color: rgb(112, 112, 112);
+    text-align: center;
 }
 
 .numProtocol {
-    width: 130px;
+    width: 500px;
     text-align: center;
     padding: 7px;
     border-radius: 15px;
     margin: 4px;
+    margin-left: 30px;
     font-size: medium;
     border-color: rgba(137, 43, 226, 0.349);
 }
@@ -170,10 +202,10 @@ body {
     box-shadow: 0px 2px 0px 0px yellow;
 }
 
-
 .calcular, 
 .reset {
     margin-left: 10px;
+    margin-bottom: 20px;
     border-radius: 20px;
     padding: 3px;
     width: 70px;
@@ -364,6 +396,7 @@ body {
     height: auto;
     /* overflow-x: auto; Barra de rolagem horizontal aparecerá automaticamente se necessário */
 }
+
 .conteudo1,
 .conteudo2 {
     width: 100%;
