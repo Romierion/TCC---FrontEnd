@@ -121,17 +121,6 @@ body {
     border-color: rgba(137, 43, 226, 0.349);
 }
 
-.numProtocol {
-    width: 140px;
-    text-align: center;
-    padding: 7px;
-    border-radius: 15px;
-    margin: 4px;
-    font-size: medium;
-    border-color: rgba(137, 43, 226, 0.349);
-}
-
-
 .tipoMae, .rhMae, .tipoPai, .rhPai {
     padding: 7px;
     border-radius: 15px;
@@ -155,7 +144,33 @@ body {
     border-color: rgba(2, 175, 54, 0.603);
 }
 
-.buscar,
+.formulario1{
+    margin-top: -200px;
+    margin-left: 80%;
+    margin-bottom: 200px;
+}
+
+.numProtocol {
+    width: 130px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 15px;
+    margin: 4px;
+    font-size: medium;
+    border-color: rgba(137, 43, 226, 0.349);
+}
+
+.buscar {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.buscar:hover{
+    box-shadow: 0px 2px 0px 0px yellow;
+}
+
+
 .calcular, 
 .reset {
     margin-left: 10px;
@@ -166,16 +181,9 @@ body {
     border-color: #14bf114b;
 }
 
-.buscar:hover,
 .calcular:hover {
     color: rgba(0, 190, 0, 0.671);
     box-shadow: 0 0 1.5px 1.5px rgba(0, 190, 0, 0.658);
-}
-
-.formulario1{
-    margin-top: -200px;
-    margin-left: 79%;
-    margin-bottom: 200px;
 }
 
 .ul1 {
