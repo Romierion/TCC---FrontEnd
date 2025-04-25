@@ -21,45 +21,45 @@
                     <button class="cor" onclick="alterarCor('black')">Escuro</button>
                     <button class="cor1" onclick="alterarCor('white')">Claro</button>
                     <a class="conta" href="Conta.html">Conta</a>
-
+                    
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
                         <input type="checkbox" id="boxMae">
                         <input type="text" class="mae" id="mae" name="mae" placeholder="Nome da mãe" required>
-                        <select class="tipoMae" id="tipoMae" name="tipoMae" required>
-                            <option value=""></option>
-                            <option value="ab">AB</option>
-                            <option value="a">A</option>
-                            <option value="b">B</option>
-                            <option value="o">O</option>
-                        </select>
-                        <select class="rhMae" id="rhMae" name="rhMae" required>
-                            <option value=""></option>
-                            <option value="-">-</option>
-                            <option value="+">+</option>
-                        </select>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                         <input type="checkbox" id="boxPai">
-                        <input type="text" class="pai" id="pai" name="pai" placeholder="Nome do pai" required>
+                        <input type="text" class="pai" id="pai" name="pai" placeholder="Nome do pai" required><br>
+
+                        <select class="tipoMae" id="tipoMae" name="tipoMae" required>
+                            <option value="" selected>Tipagem da mãe</option>
+                            <option value="ab+">AB+</option>
+                            <option value="ab-">AB-</option>
+                            <option value="a+">A+</option>
+                            <option value="a-">A-</option>
+                            <option value="b+">B+</option>
+                            <option value="b-">B-</option>
+                            <option value="o+">O+</option>
+                            <option value="o-">O-</option>
+                        </select>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                         <select class="tipoPai" id="tipoPai" name="tipoPai" required>
-                            <option value=""></option>
-                            <option value="ab">AB</option>
-                            <option value="a">A</option>
-                            <option value="b">B</option>
-                            <option value="o">O</option>
+                            <option value="" selected> Tipagem do pai</option>
+                            <option value="ab+">AB+</option>
+                            <option value="ab-">AB-</option>
+                            <option value="a+">A+</option>
+                            <option value="a-">A-</option>
+                            <option value="b+">B+</option>
+                            <option value="b-">B-</option>
+                            <option value="o+">O+</option>
+                            <option value="o-">O-</option>
                         </select>
-                        <select class="rhPai" id="rhPai" name="rhPai" required>
-                            <option value=""></option>
-                            <option value="-">-</option>
-                            <option value="+">+</option>
-                        </select>
-                        &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
-                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança"><br><br>
-                        <button type="submit" class="calcular id="calcular name="calcular"> Calcular </button>
+                        <br><br>
+                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança"><br>
+                        <button type="submit" class="calcular" id="calcular" name="calcular"> Calcular </button>
                         <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form><br>
                     <form class="formulario1" onsubmit="event.preventDefault(); resultar();">
-                        <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5" maxlength="15" placeholder="Buscar protocolo" required>
+                        <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5" maxlength="15" placeholder="Buscar protocolo" required><br>
                         <button type="submit" class="buscar" id="buscar" name="buscar"><img src="/WEB/TCC/img/lupa.png" width="20"></button>
                     </form>
                 </div>
@@ -265,22 +265,16 @@
         let crianca = document.getElementById('crianca').value;
         let tipoMae = document.getElementById('tipoMae').value;
         let tipoPai = document.getElementById('tipoPai').value;
-        let rhMae = document.getElementById('rhMae').value;
-        let rhPai = document.getElementById('rhPai').value;
         let mamae = mae;
         let papai = pai;
         let criança = crianca;
         let tipagemMae = tipoMae;
         let tipagemPai = tipoPai;
-        let fatorRhMae = rhMae;
-        let fatorRhPai = rhPai;
         document.getElementById('mamae').textContent = mamae;
         document.getElementById('papai').textContent = papai;
         document.getElementById('criança').textContent = criança;
         document.getElementById('tipagemMae').textContent = tipagemMae;
         document.getElementById('tipagemPai').textContent = tipagemPai;
-        document.getElementById('fatorRhMae').textContent = fatorRhMae;
-        document.getElementById('fatorRhPai').textContent = fatorRhPai;
         document.getElementById('conteudo2').style.display = 'block'; // block significa bloco de código (instruções)
         document.getElementById('transfusão').style.display = 'block';
         document.getElementById('previsao').style.display = 'block';
