@@ -24,23 +24,44 @@
 
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
+                        <input type="checkbox" id="boxMae">
                         <input type="text" class="mae" id="mae" name="mae" placeholder="Nome da mãe" required>
-                        <input type="text" class="tipoMae" id="tipoMae" name="tipoMae"
-                            placeholder="Tipo sanguíneo da mãe" required>
-                        <input type="text" class="rhMae" id="rhMae" name="rhMae" placeholder="Fator RH da mãe" required>
+                        <select class="tipoMae" id="tipoMae" name="tipoMae" required>
+                            <option value=""></option>
+                            <option value="ab">AB</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="o">O</option>
+                        </select>
+                        <select class="rhMae" id="rhMae" name="rhMae" required>
+                            <option value=""></option>
+                            <option value="-">-</option>
+                            <option value="+">+</option>
+                        </select>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                        <input type="checkbox" id="boxPai">
                         <input type="text" class="pai" id="pai" name="pai" placeholder="Nome do pai" required>
-                        <input type="text" class="tipoPai" id="tipoPai" name="tipoPai"
-                            placeholder="Tipo sanguíneo do pai" required>
-                        <input type="text" class="rhPai" id="rhPai" name="rhPai" placeholder="Fator RH do pai" required>
-                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança">
-                        <button type="submit" class="incluir" id="incluir" name="incluir"> Incluir </button>
+                        <select class="tipoPai" id="tipoPai" name="tipoPai" required>
+                            <option value=""></option>
+                            <option value="ab">AB</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="o">O</option>
+                        </select>
+                        <select class="rhPai" id="rhPai" name="rhPai" required>
+                            <option value=""></option>
+                            <option value="-">-</option>
+                            <option value="+">+</option>
+                        </select>
+                        &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
+                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança"><br><br>
+                        <button type="submit" class="calcular id="calcular name="calcular"> Calcular </button>
                         <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form><br>
-                    <form id="formulario" class="formulario" onsubmit="event.preventDefault(); resultar();">
+                    <form class="formulario1" onsubmit="event.preventDefault(); resultar();">
                         <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5"
                             maxlength="15" placeholder="Buscar protocolo" required>
                         <button type="submit" class="buscar" id="buscar" name="buscar"> Buscar </button>
-                        <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form>
                 </div>
             </div>
@@ -221,7 +242,7 @@
                             </li>
                             <button type="submit" id="prever" class="prever"> <b class="prever1">PREVER</b></button>
                         </ul>
-                        <ul class="ul2">
+                        <ul id="data" class="ul2">
                             <li>A previsão do parto é para o dia: <b>02/09/2025</b></li>
                         </ul>
                     </form>
@@ -313,7 +334,7 @@
 
     function gerarProtocolo() {
 
-        let pass = '10013-' + ''; // id + protocolo gerado
+        let pass = ''; // id + protocolo gerado
         for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
             pass += charset.charAt(Math.floor(Math.random() * n));
         }
