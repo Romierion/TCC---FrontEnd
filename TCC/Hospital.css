@@ -137,10 +137,10 @@ body {
     padding: 7px;
     border-radius: 15px;
     margin: 4px;
-    margin-left: 25px;
+    margin-left: 5px;
     font-size: medium;
     border-color: rgba(137, 43, 226, 0.349);
-    width: 500px;
+    width: 485px;
 }
 
 .mae, .pai  {
@@ -152,12 +152,31 @@ body {
     border-color: rgba(137, 43, 226, 0.349);
 }
 
+.parentescoMae {
+    margin-right: 180px;
+    font-size: 18px;
+}
+
+.parentescoPai {
+    margin-right: 90px;
+    font-size: 18px;
+}
+
+.tipageMae {
+    margin-right: 160px;
+    font-size: 18px;
+}
+
+.tipagePai {
+    margin-right: 70px;
+    font-size: 18px;
+}
+
 .tipoMae, .tipoPai {
     padding: 7px;
     border-radius: 15px;
     border-width: 2px;
     margin: 4px;
-    margin-left: 28px;
     font-size: medium;
     width: 213px;
     border-color: rgba(137, 43, 226, 0.349);
@@ -177,17 +196,23 @@ body {
 }
 
 select { /*Estiliza a tag option*/
-    color: rgb(112, 112, 112);
+    color: black;
     text-align: center;
 }
 
+input::placeholder { /*Estiliza o placeholder*/
+    color: black;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
 .numProtocol {
-    width: 500px;
+    width: 485px;
     text-align: center;
     padding: 7px;
     border-radius: 15px;
     margin: 4px;
-    margin-left: 30px;
+    margin-left: 5px;
     font-size: medium;
     border-color: rgba(137, 43, 226, 0.349);
 }
