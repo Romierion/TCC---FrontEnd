@@ -24,14 +24,16 @@
                     
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
-                        <input type="checkbox" id="boxMae">
-                        <input type="text" class="mae" id="mae" name="mae" placeholder="Nome da mãe" required>
+                        <label id="parentescoMae" class="parentescoMae"><b>Nome da mãe:</b></label>
+                        <label id="parentescoPai" class="parentescoPai"><b>Nome do pai:</b></label><br>
+                        <input type="text" class="mae" id="mae" name="mae" required>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <input type="checkbox" id="boxPai">
-                        <input type="text" class="pai" id="pai" name="pai" placeholder="Nome do pai" required><br>
+                        <input type="text" class="pai" id="pai" name="pai" required><br><br>
 
+                        <label id="tipageMae" class="tipageMae"><b>Tipagem da mãe:</b></label>
+                        <label id="tipageMae" class="tipagePai"><b>Tipagem do Pai:</b></label><br>
                         <select class="tipoMae" id="tipoMae" name="tipoMae" required>
-                            <option value="" selected>Tipagem da mãe</option>
+                            <option value="" selected></option>
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
                             <option value="a+">A+</option>
@@ -43,7 +45,7 @@
                         </select>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                         <select class="tipoPai" id="tipoPai" name="tipoPai" required>
-                            <option value="" selected> Tipagem do pai</option>
+                            <option value="" selected></option>
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
                             <option value="a+">A+</option>
