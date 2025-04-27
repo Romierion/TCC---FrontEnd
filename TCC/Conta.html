@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta</title>
+    <link rel="icon" href="img/Bolsa.png">
+    <link rel="stylesheet" href="Conta.css">
+</head>
+
+<body>
+    <div class="box">
+        <div id="cadastro" class="cadastro">
+            <h1>Dados do Hospital</h1>
+            <div class="form">
+                <form id="form" action="">
+                    <input type="number" id="id" class="id" name="id" placeholder="10013" disabled>
+                    <input type="text" id="nome" class="nome" name="nome" placeholder="Nome da instituição" required>
+                    <input type="text" id="cnpj" class="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ" required>
+                    <input type="text" id="endereco" class="endereco" name="endereco" placeholder="Endereco" required>
+                    <input type="text" id="telefone" class="telefone" name="telefone" maxlength="11" placeholder="Telefone" required>
+                    <input type="email" id="email" class="email" name="email" placeholder="E-mail" required>
+                    <input type="password" id="senha" class="senha" name="senha" minlength="6" placeholder="Senha" required><br>
+                    <button type="submit" id="atualizar" class="atualizar" name="atualizar">Atualizar cadastro</button><br>
+                </form>
+                <form id="form1">
+                    <button type="submit" id="cancelar" class="cancelar" name="cancelar">Cancelar conta</button>
+                </form>
+                <button class="cor" onclick="alterarCor('black')">Escuro</button>
+                <button class="cor1" onclick="alterarCor('white')">Claro</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="Conta.js"></script>
+
+</html>
