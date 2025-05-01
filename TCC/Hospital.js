@@ -10,11 +10,11 @@ window.onload = function () {
 };
 
 function resultar() {
-    let mae = document.getElementById('mae').value;
-    let pai = document.getElementById('pai').value;
+    let mae = document.getElementById('Mae').value;
+    let pai = document.getElementById('Pai').value;
     let crianca = document.getElementById('crianca').value;
-    let tipoMae = document.getElementById('tipoMae').value;
-    let tipoPai = document.getElementById('tipoPai').value;
+    let tipoMae = document.getElementById('tipoMamae').value;
+    let tipoPai = document.getElementById('tipoPapai').value;
     let mamae = mae;
     let papai = pai;
     let criança = crianca;
