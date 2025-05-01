@@ -6,8 +6,6 @@ public class Gestores {
 	private String nomeCrianca;
 	private String tipagemMae;
 	private String tipagemPai;
-	private String fatorRhMae;
-	private String fatorRhPai;
 
 	public Gestores() {
 
@@ -45,14 +43,6 @@ public class Gestores {
 		this.tipagemMae = tipagemMae;
 	}
 
-	public String getFatorRhMae() {
-		return fatorRhMae;
-	}
-
-	public void setFatorRhMae(String fatorRhMae) {
-		this.fatorRhMae = fatorRhMae;
-	}
-
 	public String getTipagemPai() {
 		return tipagemPai;
 	}
@@ -61,18 +51,8 @@ public class Gestores {
 		this.tipagemPai = tipagemPai;
 	}
 
-	public String getFatorRhPai() {
-		return fatorRhPai;
-	}
-
-	public void setFatorRhPai(String fatorRhPai) {
-		this.fatorRhPai = fatorRhPai;
-	}
-
 	@Override
 	public String toString() {
-		return "Nome da mãe: " + getNomeMae() + "\n" + "Tipagem da mãe: " + getTipagemMae() + "\n" + "FatorRH da mãe: " + getFatorRhMae() + "\n" + "\n" +
-		"Nome do pai: " + getNomePai() +"\n" + "tipagem do pai: " + getTipagemPai() + "\n" + "Fator RH do pai: " + getFatorRhPai() + "\n" + "\n" +
-		"Nome da criança: " + getNomeCrianca();
+		return "Nome da mãe: " + getNomeMae() + "\nTipagem da mãe: " + getTipagemMae() + "\nNome do pai: " + getNomePai() +"\ntipagem do pai: " + getTipagemPai() + "\nNome da criança: " + getNomeCrianca();
 	}
 }
