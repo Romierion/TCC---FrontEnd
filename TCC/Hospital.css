@@ -13,7 +13,7 @@
 
 .title {
     color: #fff;
-    margin-left: 10px;
+    margin-left: 50px;
     margin-top: -30px;
     margin-bottom: 100px;
 }
@@ -142,7 +142,7 @@ body {
     width: 485px;
 }
 
-.mae, .pai  {
+.Mae, .Pai  {
     text-align: center;
     padding: 7px;
     border-radius: 15px;
@@ -161,17 +161,17 @@ body {
     font-size: 18px;
 }
 
-.tipageMae {
+.tipageMamae {
     margin-right: 160px;
     font-size: 18px;
 }
 
-.tipagePai {
+.tipagePapai {
     margin-right: 70px;
     font-size: 18px;
 }
 
-.tipoMae, .tipoPai {
+.tipoMamae, .tipoPapai {
     padding: 7px;
     border-radius: 15px;
     border-width: 2px;
@@ -181,17 +181,17 @@ body {
     border-color: rgba(137, 43, 226, 0.349);
 }
 
+.Mae:hover, .tipoMamae:hover, .Pai:hover, .tipoPapai:hover, .crianca:hover, .numProtocol:hover {
+    color: rgb(0, 190, 0);
+    border-color: rgba(2, 175, 54, 0.603);
+}
+
 .diaMenstruacao, .mesMenstruacao, .anoMenstruacao{
     text-align: center;
     padding: 4px;
     border-radius: 15px;
     font-size: medium;
     border-color: rgba(137, 43, 226, 0.349);
-}
-
-.mae:hover, .tipoMae:hover, .rhMae:hover, .pai:hover, .tipoPai:hover, .rhPai:hover, .crianca:hover, .numProtocol:hover {
-    color: rgb(0, 190, 0);
-    border-color: rgba(2, 175, 54, 0.603);
 }
 
 select { /*Estiliza a tag option*/
@@ -220,6 +220,7 @@ input::placeholder { /*Estiliza o placeholder*/
     border: none;
     background: none;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .buscar:hover{
@@ -252,10 +253,26 @@ input::placeholder { /*Estiliza o placeholder*/
     list-style: none;
 }
 
-.li1 {
+.parentesco {
     list-style: none;
     text-align: center;
     width: 10%;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.nome {
+    list-style: none;
+    text-align: center;
+    width: 16%;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.tipoSanguineo {
+    list-style: none;
+    text-align: center;
+    width: 18%;
     margin-top: -5px;
     margin-bottom: -5px;
 }
@@ -267,10 +284,26 @@ input::placeholder { /*Estiliza o placeholder*/
     margin-bottom: 15px;
 }
 
-.li2 {
+.mae, .pai, .filho {
     list-style: none;
     text-align: center;
     width: 10%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.nomeMae, .nomePai, .nomeFilho {
+    list-style: none;
+    text-align: center;
+    width: 16%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.tipoMae, .tipoPai, .tipoFilho {
+    list-style: none;
+    text-align: center;
+    width: 18%;
     margin-top: -20px;
     margin-bottom: -20px;
 }
@@ -279,7 +312,7 @@ input::placeholder { /*Estiliza o placeholder*/
 .deletarIMG {
     background-color: rgba(240, 216, 216, 0.514);
     border: none;
-    margin-left: 34%;
+    margin-left: 30%;
     margin-top: 8px;
     margin-bottom: 8px;
     border-radius: 5px;
