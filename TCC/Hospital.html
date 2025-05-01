@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Minha Tipagem Sanguínea </title>
-    <link rel="icon" href="img/Bolsa.png">
+    <link rel="icon" href="/WEB/TCC/img/Bolsa.png">
     <link rel="stylesheet" href="Hospital.css">
 </head>
 
@@ -26,13 +26,13 @@
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
                         <label id="parentescoMae" class="parentescoMae"><b>Nome da mãe:</b></label>
                         <label id="parentescoPai" class="parentescoPai"><b>Nome do pai:</b></label><br>
-                        <input type="text" class="mae" id="mae" name="mae" required>
+                        <input type="text" class="Mae" id="Mae" name="Mae" required>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <input type="text" class="pai" id="pai" name="pai" required><br><br>
+                        <input type="text" class="Pai" id="Pai" name="Pai" required><br><br>
 
-                        <label id="tipageMae" class="tipageMae"><b>Tipagem da mãe:</b></label>
-                        <label id="tipageMae" class="tipagePai"><b>Tipagem do Pai:</b></label><br>
-                        <select class="tipoMae" id="tipoMae" name="tipoMae" required>
+                        <label id="tipageMamae" class="tipageMamae"><b>Tipagem da mãe:</b></label>
+                        <label id="tipagePapai" class="tipagePapai"><b>Tipagem do Pai:</b></label><br>
+                        <select class="tipoMamae" id="tipoMamae" name="tipoMamae" required>
                             <option value="" selected></option>
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
@@ -44,7 +44,7 @@
                             <option value="o-">O-</option>
                         </select>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <select class="tipoPai" id="tipoPai" name="tipoPai" required>
+                        <select class="tipoPapai" id="tipoPapai" name="tipoPapai" required>
                             <option value="" selected></option>
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
@@ -80,17 +80,14 @@
                     </div>
 
                     <ul id="ul1" class="ul1" class="li11">
-                        <li class="li1">
+                        <li class="parentesco">
                             <p>Parentesco</p>
                         </li>
-                        <li class="li1">
+                        <li class="nome">
                             <p>Nome</p>
                         </li>
-                        <li class="li1">
-                            <p>Tipo sanguíneo</p>
-                        </li>
-                        <li class="li1">
-                            <p>Fator RH</p>
+                        <li class="tipoSanguineo">
+                            <p>Tipo sanguíneo/Fator RH</p>
                         </li>
                         <button type="submit" id="salvarIMG" class="salvarIMG" onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png" width="15px"></button>
                         <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b> SALVAR </b> </button>
@@ -101,47 +98,38 @@
                         <button type="submit" class="sair"> <b> SAIR </b> </button>
                     </ul>
                     <ul class="ul2">
-                        <li class="li2">
+                        <li class="mae">
                             <p>Mãe</p>
                         </li>
-                        <li class="li2">
+                        <li class="nomeMae">
                             <p id="mamae"></p>
                         </li>
-                        <li class="li2">
+                        <li class="tipoMae">
                             <p id="tipagemMae"></p>
                         </li>
-                        <li class="li2">
-                            <p id="fatorRhMae"></p>
-                        </li>
                     </ul>
                     <hr>
                     <ul class="ul2">
-                        <li class="li2">
+                        <li class="pai">
                             <p>Pai</p>
                         </li>
-                        <li class="li2">
+                        <li class="nomePai">
                             <p id="papai"></p>
                         </li>
-                        <li class="li2">
+                        <li class="tipoPai">
                             <p id="tipagemPai"></p>
-                        </li>
-                        <li class="li2">
-                            <p id="fatorRhPai"></p>
                         </li>
                     </ul>
                     <hr>
                     <ul class="ul2">
-                        <li class="li2">
+                        <li class="filho">
                             <p>Filho(a)</p>
                         </li>
-                        <li class="li2">
+                        <li class="nomeFilho">
                             <p id="criança"></p>
                         </li>
-                        <li class="li2">
+                        <li class="tipoFilho">
                             <p id="tipagemCriança"></p>
-                        </li>
-                        <li class="li2">
-                            <p id="fatorRhCriança"></p>
                         </li>
                     </ul>
 
