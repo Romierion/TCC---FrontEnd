@@ -161,6 +161,10 @@ body {
     margin: 10px;
 }
 
+.doador, .doador1 {
+    margin-right: 40px;
+}
+
 .tipagem {
     color: white;
     margin-top: -3px;
@@ -181,20 +185,12 @@ body {
 .tipagem2 {
     margin-top: -20px;
     margin-bottom: -20px;
-    width: 10%;
-    text-align: center;
-
-}
-
-.tipagem3 {
-    margin-top: -20px;
-    margin-bottom: -20px;
     width: 30%;
     text-align: center;
 
 }
 
-.tipagem4 {
+.tipagem3 {
     margin-top: -20px;
     margin-bottom: -20px;
     width: 30%;
