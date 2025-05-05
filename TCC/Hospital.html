@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Minha Tipagem Sanguínea </title>
-    <link rel="icon" href="/WEB/TCC/img/Bolsa.png">
+    <link rel="icon" href="img/Bolsa.png">
     <link rel="stylesheet" href="Hospital.css">
 </head>
 
@@ -33,7 +33,7 @@
                         <label id="tipageMamae" class="tipageMamae"><b>Tipagem da mãe:</b></label>
                         <label id="tipagePapai" class="tipagePapai"><b>Tipagem do Pai:</b></label><br>
                         <select class="tipoMamae" id="tipoMamae" name="tipoMamae" required>
-                            <option value="" selected></option>
+                            <option value="" selected></option> <!-- selected define como valor padrão a ser apresentado inicialmente -->
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
                             <option value="a+">A+</option>
@@ -79,7 +79,7 @@
                         <a id="tooltip" class="tooltip" style="display: none;">Clique no prococolo para copiar.</a>
                     </div>
 
-                    <ul id="ul1" class="ul1" class="li11">
+                    <ul id="ul1" class="ul1">
                         <li class="parentesco">
                             <p>Parentesco</p>
                         </li>
@@ -143,9 +143,6 @@
 
                     <div id="doar" style="display: none;">
                         <ul id="ul1" class="ul1">
-                            <li class="Tipagem">
-                                <p class="tipo">Tipagem</p>
-                            </li>
                             <li class="tipagem1">
                                 <p id="doador" class="doador">Para quem pode doar</p>
                             </li>
@@ -156,46 +153,34 @@
 
                         <ul id="ul2" class="ul2">
                             <li class="tipagem2">
-                                <p id="tipo1" class="tipo1"> Se for O+</p>
+                                <p id="doador1" class="doador1">Se for O+: O+</p>
                             </li>
                             <li class="tipagem3">
-                                <p id="doador1" class="doador1">O+</p>
-                            </li>
-                            <li class="tipagem4">
                                 <p id="doação1" class="doação1">O+</p>
                             </li>
                         </ul>
                         <ul id="ul2" class="ul2">
                             <li class="tipagem2">
-                                <p id="tipo1" class="tipo1">Se for A+</p>
+                                <p id="doador1" class="doador1">Se for A+: A+</p>
                             </li>
                             <li class="tipagem3">
-                                <p id="doador1" class="doador1">A+</p>
-                            </li>
-                            <li class="tipagem4">
                                 <p id="doação1" class="doação1">A+</p>
                             </li>
                         </ul>
                         <ul id="ul2" class="ul2">
                             <li class="tipagem2">
-                                <p id="tipo1" class="tipo1">Se for B+</p>
+                                <p id="doador1" class="doador1">Se for B+: B+</p>
                             </li>
                             <li class="tipagem3">
-                                <p id="doador1" class="doador1">B+</p>
-                            </li>
-                            <li class="tipagem4">
                                 <p id="doação1" class="doação1">B+</p>
                             </li>
                         </ul>
                         <ul id="ul2" class="ul2">
                             <li class="tipagem2">
-                                <p id="tipo1" class="tipo1">Se for AB+</p>
+                                <p id="doador1" class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
                             </li>
                             <li class="tipagem3">
-                                <p id="doador1" class="doador1">AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
-                            </li>
-                            <li class="tipagem4">
-                                <p id="doação1" class="doação1">AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                                <p id="doação1" class="doação1">Se for AB+: AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
                             </li>
                         </ul>
                     </div>
