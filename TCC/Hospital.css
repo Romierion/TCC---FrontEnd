@@ -345,6 +345,14 @@ input::placeholder { /*Estiliza o placeholder*/
     margin: 10px;
 }
 
+.doador, .doador1 {
+    margin-right: 40px;
+}
+
+.doação {
+    margin-left: 15%;
+}
+
 .tipagem {
     color: white;
     margin-top: -3px;
@@ -365,25 +373,15 @@ input::placeholder { /*Estiliza o placeholder*/
 .tipagem2 {
     margin-top: -20px;
     margin-bottom: -20px;
-
+    width: 30%;
     text-align: center;
-
 }
 
 .tipagem3 {
     margin-top: -20px;
     margin-bottom: -20px;
-    width: 30%;
+    width: 35%;
     text-align: center;
-
-}
-
-.tipagem4 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 30%;
-    text-align: center;
-
 }
 
 .previsao {
