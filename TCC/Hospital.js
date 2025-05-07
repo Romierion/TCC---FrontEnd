@@ -88,3 +88,17 @@ function copiarProtocolo() {
     alert("Protocolo copiado com sucesso!")
     navigator.clipboard.writeText(novoProtocolo);
 }
+
+function confirmarSaida() {
+    var confirmar = confirm("Tem certeza que deseja sair?");
+    if (confirmar) {
+        window.location.href = 'Login.html';
+    }
+}
+
+function deletar() {
+    var deleta = confirm("Tem certeza que deseja deletar o arquivo?");
+    if (deleta) {
+        alert("Aquivo deletado!");
+    }
+}
