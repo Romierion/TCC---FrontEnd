@@ -50,7 +50,7 @@
                                 width="15px"></button>
                         <button class="baixar" onclick="baixarPDF()"> <b> BAIXAR RELATÓRIO </b> </button>
                         <hr class="hr">
-                        <button type="submit" class="sair" href="Login.html"> <b> SAIR </b> </button>
+                        <button class="sair" onclick="confirmarSaida()"> <b> SAIR </b> </button>
                     </ul>
                     <ul class="ul2">
                         <li class="mae">
@@ -94,9 +94,9 @@
                             <label for="onoff1"></label>
                             <p class="p">Deseja saber para quem poderá fazer ou receber transfusão de sangue?</p>
                         </div>
-                    </div>
+                    </div><br>
 
-                    <div id="doar" style="display: none;">
+                    <div id="doar" class="doar" style="display: none;">
                         <ul id="ul1" class="ul1">
                             <li class="tipagem1">
                                 <p id="doador" class="doador">Para quem pode doar</p>
@@ -107,35 +107,86 @@
                         </ul>
 
                         <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for O+: O+</p>
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for O+: O+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
-                            <li class="tipagem2">
-                                <p id="doação1" class="doação1">O+</p>
-                            </li>
-                        </ul>
-                        <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for A+: A+</p>
-                            </li>
-                            <li class="tipagem2">
-                                <p id="doação1" class="doação1">A+</p>
-                            </li>
-                        </ul>
-                        <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for B+: B+</p>
-                            </li>
-                            <li class="tipagem2">
-                                <p id="doação1" class="doação1">B+</p>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for O+: O+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
                         </ul>
+
                         <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
-                            <li class="tipagem2">
-                                <p id="doação1" class="doação1">AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for B+: B+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for B+: B+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
                         </ul>
                     </div>
@@ -146,9 +197,9 @@
                             <label for="onoff2"></label>
                             <p class="p">Deseja saber também a previsão do parto?</p>
                         </div>
-                    </div>
+                    </div><br><br><br><br>
 
-                    <form id="partos" style="display: none;" action="parto.php" method="post">
+                    <form id="partos" class="partos" style="display: none;" action="parto.php" method="post">
                         <ul class="ul1">
                             <li class="parto">
                                 <label class="label">Dia da última menstruação</label>
@@ -163,9 +214,14 @@
                                 <input type="number" id="anoMenstruacao" name="anoMenstruacao" class="anoMenstruacao" required>
                             </li>
                         </ul>
-                        <ul class="ul2">
-                            <label class="label">A previsão do parto é para o dia: <b>02/09/2025</b></label><br><br>
-                         </ul>
+                        
+                        <table id="data" class="ul2">
+                            <tbody class="previsaoParto">
+                                <tr>
+                                    <td>A previsão do parto é para o dia: <b>02/09/2025</b></td>
+                                </tr>
+                            </tbody>
+                        </table><br>
                     </form>
                 </div>
             </div>
