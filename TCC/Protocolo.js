@@ -75,3 +75,11 @@ document.getElementById('onoff2').addEventListener('change', function () {
         partosDiv.style.display = 'none';
     }
 });
+
+function confirmarSaida() {
+    var confirmar = confirm("Tem certeza que deseja sair?");
+    if (confirmar) {
+        localStorage.setItem("usuarioAutenticado", "false");
+        window.location.href = 'Login.html';
+    }
+}
