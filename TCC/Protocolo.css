@@ -161,10 +161,6 @@ body {
     margin: 10px;
 }
 
-.doador, .doador1 {
-    margin-right: 40px;
-}
-
 .tipagem {
     color: white;
     margin-top: -3px;
@@ -177,29 +173,43 @@ body {
     color: white;
     margin-top: -3px;
     margin-bottom: -3px;
-    width: 30%;
+    width: 50%;
     text-align: center;
 
 }
 
-.tipagem2 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 30%;
-    text-align: center;
+.tipagem2, .tipagem3{
+    width: 45%;
+} 
 
+.doador{
+    margin-right: 10%;
 }
 
-.tipagem3 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 30%;
-    text-align: center;
+.doação {
+    margin-right: 30%;
+}
 
+.doador1{
+    text-align: center;
+    width: 1%;
+} 
+
+.doação1 {
+    text-align: center;
+    width: 1%;
 }
 
 .previsao {
     margin-top: -17px;
+}
+
+.partos {
+    margin-top: -75px;
+}
+
+.doar {
+    margin-top: -20px;
 }
 
 .parto {
@@ -214,7 +224,6 @@ body {
     margin-right: 20px;
     width: 35px;
     padding: 5px;
-    margin: 4px;
     border-color: rgba(137, 43, 226, 0.349);
 }
 
@@ -225,7 +234,6 @@ body {
     margin-right: 20px;
     width: 50px;
     padding: 5px;
-    margin: 4px;
     border-color: rgba(137, 43, 226, 0.349);
 }
 
@@ -234,6 +242,10 @@ body {
 .anoMenstruacao:hover {
     color: rgb(0, 190, 0);
     border-color: rgba(2, 175, 54, 0.603);
+}
+
+.previsaoParto {
+    margin-left: 30px;
 }
 
 .p {
