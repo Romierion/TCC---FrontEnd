@@ -21,19 +21,20 @@
                     <button class="cor" onclick="alterarCor('black')">Escuro</button>
                     <button class="cor1" onclick="alterarCor('white')">Claro</button>
                     <a class="conta" href="Conta.html">Conta</a>
-                    
+
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
                         <label id="parentescoMae" class="parentescoMae"><b>Nome da mãe:</b></label>
                         <label id="parentescoPai" class="parentescoPai"><b>Nome do pai:</b></label><br>
                         <input type="text" class="Mae" id="Mae" name="Mae" required>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         <input type="text" class="Pai" id="Pai" name="Pai" required><br><br>
 
                         <label id="tipageMamae" class="tipageMamae"><b>Tipagem da mãe:</b></label>
                         <label id="tipagePapai" class="tipagePapai"><b>Tipagem do Pai:</b></label><br>
-                        <select class="tipoMamae" id="tipoMamae" name="tipoMamae" required>
-                            <option value="" selected></option> <!-- selected define como valor padrão a ser apresentado inicialmente -->
+                        <select id="tipoMamae" class="tipoMamae" name="tipoMamae" required>
+                            <option value="" selected></option>
+                            <!-- selected define como valor padrão a ser apresentado inicialmente -->
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
                             <option value="a+">A+</option>
@@ -43,8 +44,8 @@
                             <option value="o+">O+</option>
                             <option value="o-">O-</option>
                         </select>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <select class="tipoPapai" id="tipoPapai" name="tipoPapai" required>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <select id="tipoPapai" class="tipoPapai" name="tipoPapai" required>
                             <option value="" selected></option>
                             <option value="ab+">AB+</option>
                             <option value="ab-">AB-</option>
@@ -56,13 +57,16 @@
                             <option value="o-">O-</option>
                         </select>
                         <br><br>
-                        <input type="text" class="crianca" id="crianca" name="crianca" placeholder="Nome da criança"><br>
+                        <input type="text" class="crianca" id="crianca" name="crianca"
+                            placeholder="Nome da criança"><br>
                         <button type="submit" class="calcular" id="calcular" name="calcular"> Calcular </button>
                         <button type="reset" class="reset" id="reset" name="reset"> Limpar </button>
                     </form><br>
                     <form class="formulario1" onsubmit="event.preventDefault(); resultar();">
-                        <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5" maxlength="15" placeholder="Buscar protocolo" required><br>
-                        <button type="submit" class="buscar" id="buscar" name="buscar"><img src="/WEB/TCC/img/lupa.png" width="20"></button>
+                        <input type="text" class="numProtocol" id="numProtocol" name="numProtocol" minlength="5"
+                            maxlength="15" placeholder="Buscar protocolo" required><br>
+                        <button type="submit" class="buscar" id="buscar" name="buscar"><img src="/WEB/TCC/img/lupa.png"
+                                width="20"></button>
                     </form>
                 </div>
             </div>
@@ -89,13 +93,17 @@
                         <li class="tipoSanguineo">
                             <p>Tipo sanguíneo/Fator RH</p>
                         </li>
-                        <button type="submit" id="salvarIMG" class="salvarIMG" onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png" width="15px"></button>
-                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b> SALVAR </b> </button>
+                        <button type="submit" id="salvarIMG" class="salvarIMG"
+                            onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png"
+                                width="15px"></button>
+                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b>
+                                SALVAR </b> </button>
                         <hr class="hr">
-                        <button type="submit" class="deletarIMG"><img class="img" src="img/Deletar.png" width="10px"></button>
-                        <button type="submit" class="deletar"> <b> DELETAR </b> </button>
+                        <button type="submit" class="deletarIMG" onclick="deletar()"><img class="img" src="img/Deletar.png"
+                                width="10px"></button>
+                        <button type="submit" class="deletar" onclick="deletar()"> <b> DELETAR </b> </button>
                         <hr class="hr">
-                        <button type="submit" class="sair"> <b> SAIR </b> </button>
+                        <button class="sair" onclick="confirmarSaida()"> <b> SAIR </b> </button>
                     </ul>
                     <ul class="ul2">
                         <li class="mae">
@@ -139,48 +147,100 @@
                             <label for="onoff1"></label>
                             <p class="p">Deseja saber para quem poderá fazer ou receber transfusão de sangue?</p>
                         </div>
-                    </div>
+                    </div><br>
 
-                    <div id="doar" style="display: none;">
+                    <div id="doar" class="doar" style="display: none;">
                         <ul id="ul1" class="ul1">
                             <li class="tipagem1">
                                 <p id="doador" class="doador">Para quem pode doar</p>
                             </li>
+                            &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
                             <li class="tipagem1">
                                 <p id="doação" class="doação">De quem pode receber</p>
                             </li>
                         </ul>
 
                         <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for O+: O+</p>
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for O+: O+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
-                            <li class="tipagem3">
-                                <p id="doação1" class="doação1">O+</p>
-                            </li>
-                        </ul>
-                        <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for A+: A+</p>
-                            </li>
-                            <li class="tipagem3">
-                                <p id="doação1" class="doação1">A+</p>
-                            </li>
-                        </ul>
-                        <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for B+: B+</p>
-                            </li>
-                            <li class="tipagem3">
-                                <p id="doação1" class="doação1">B+</p>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for O+: O+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
                         </ul>
+
                         <ul id="ul2" class="ul2">
-                            <li class="tipagem2">
-                                <p id="doador1" class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
-                            <li class="tipagem3">
-                                <p id="doação1" class="doação1">Se for AB+: AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</p>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for B+: B+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for B+: B+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
                         </ul>
                     </div>
@@ -191,9 +251,9 @@
                             <label for="onoff2"></label>
                             <p class="p">Deseja saber também a previsão do parto?</p>
                         </div>
-                    </div>
+                    </div><br><br><br><br>
 
-                    <form id="partos" style="display: none;">
+                    <form id="partos" class="partos" style="display: none;">
                         <ul class="ul1">
                             <li class="parto">
                                 <label>Dia da última menstruação</label>
@@ -212,15 +272,20 @@
                             </li>
                             <button type="submit" id="prever" class="prever"> <b class="prever1">PREVER</b></button>
                         </ul>
-                        <ul id="data" class="ul2">
-                            <li>A previsão do parto é para o dia: <b>02/09/2025</b></li><br><br>
-                        </ul>
-                    </form>
 
+                        <table id="data" class="ul2">
+                            <tbody class="previsaoParto">
+                                <tr>
+                                    <td>A previsão do parto é para o dia: <b>02/09/2025</b></td>
+                                </tr>
+                            </tbody>
+                        </table><br>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="Hospital.js"></script>
+
 </html>
