@@ -345,14 +345,6 @@ input::placeholder { /*Estiliza o placeholder*/
     margin: 10px;
 }
 
-.doador, .doador1 {
-    margin-right: 40px;
-}
-
-.doação {
-    margin-left: 15%;
-}
-
 .tipagem {
     color: white;
     margin-top: -3px;
@@ -365,23 +357,31 @@ input::placeholder { /*Estiliza o placeholder*/
     color: white;
     margin-top: -3px;
     margin-bottom: -3px;
-    width: 30%;
+    width: 50%;
     text-align: center;
 
 }
 
-.tipagem2 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 30%;
-    text-align: center;
+.tipagem2, .tipagem3{
+    width: 45%;
+} 
+
+.doador {
+    margin-right: 2%;
 }
 
-.tipagem3 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    width: 35%;
+.doação {
+    margin-right: 41%;
+}
+
+.doador1{
     text-align: center;
+    width: 1%;
+} 
+
+.doação1 {
+    text-align: center;
+    width: 1%;
 }
 
 .previsao {
@@ -425,6 +425,18 @@ input::placeholder { /*Estiliza o placeholder*/
 
 .prever1:hover {
     box-shadow: #f5f253 0 2px 0 0;
+}
+
+.previsaoParto {
+    margin-left: 30px;
+}
+
+.partos {
+    margin-top: -75px;
+}
+
+.doar {
+    margin-top: -20px;
 }
 
 .p {
