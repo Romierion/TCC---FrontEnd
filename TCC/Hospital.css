@@ -1,15 +1,15 @@
 .container-protocolo {
     display: flex;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 45%;
     margin-top: 70px;
     margin-bottom: -170px;
     width: 400px;
 }
 
-.slider {
+/* .slider {
     opacity: 0;
-}
+} */
 
 .title {
     color: #fff;
@@ -92,7 +92,21 @@
     color: rgb(189, 0, 31);
     font-size: large;
     text-decoration: none;
-    margin-left: 7%;
+    margin-left: 80%;
+    margin-right: 3px;
+}
+
+.sair {
+    background-color: transparent;
+    border-bottom: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    color: rgb(189, 0, 31);
+    cursor: pointer;
+}
+.sair:hover,
+.conta:hover {
+    box-shadow: #13bf11 0 2px 0 0;
 }
 
 body {
@@ -312,7 +326,7 @@ input::placeholder { /*Estiliza o placeholder*/
 .deletarIMG {
     background-color: rgba(240, 216, 216, 0.514);
     border: none;
-    margin-left: 30%;
+    margin-left: 33%;
     margin-top: 8px;
     margin-bottom: 8px;
     border-radius: 5px;
@@ -324,16 +338,14 @@ input::placeholder { /*Estiliza o placeholder*/
 }
 
 .salvar,
-.deletar,
-.sair {
+.deletar {
     background-color: rgba(22, 1, 1, 0);
     border: none;
     color: rgb(247, 247, 247);
     cursor: pointer;
 }
 
-.salvar:hover,
-.sair:hover {
+.salvar:hover {
     color: #f5f253;
 }
 
