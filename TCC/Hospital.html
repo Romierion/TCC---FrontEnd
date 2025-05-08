@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="Hospital.css">
 </head>
 
-<div class="container-input">
-    <input id="slider" class="slider" type="range" min="5" max="15" style="display: none;">
-</div>
-
 <body>
     <div id="div">
         <div class="div1">
@@ -21,6 +17,7 @@
                     <button class="cor" onclick="alterarCor('black')">Escuro</button>
                     <button class="cor1" onclick="alterarCor('white')">Claro</button>
                     <a class="conta" href="Conta.html">Conta</a>
+                    <button class="sair" onclick="confirmarSaida()"> <b> SAIR </b> </button>
 
                     <h2 class="titulo"> Tipagem sanguínea e fator RH </h2>
                     <form class="formulario" onsubmit="event.preventDefault(); resultar();">
@@ -77,7 +74,7 @@
                 <div id="conteudo2" class="conteudo" style="display: none;">
 
                     <div id="container-protocolo" onclick="copiarProtocolo()" class="container-protocolo hide">
-                        <input id="slider" class="slider" type="range" min="5" max="15">
+                        <!-- <input id="slider" class="slider" type="range" min="5" max="15"> -->
                         <a class="title">Protocolo:&nbsp;</a>
                         <a id="protocolo" class="protocolo"></a>
                         <a id="tooltip" class="tooltip" style="display: none;">Clique no prococolo para copiar.</a>
@@ -93,17 +90,11 @@
                         <li class="tipoSanguineo">
                             <p>Tipo sanguíneo/Fator RH</p>
                         </li>
-                        <button type="submit" id="salvarIMG" class="salvarIMG"
-                            onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png"
-                                width="15px"></button>
-                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b>
-                                SALVAR </b> </button>
+                        <button type="submit" id="salvarIMG" class="salvarIMG" onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png" width="15px"></button>
+                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b> SALVAR </b> </button>
                         <hr class="hr">
-                        <button type="submit" class="deletarIMG" onclick="deletar()"><img class="img" src="img/Deletar.png"
-                                width="10px"></button>
+                        <button type="submit" class="deletarIMG" onclick="deletar()"><img class="img" src="img/Deletar.png" width="10px"></button>
                         <button type="submit" class="deletar" onclick="deletar()"> <b> DELETAR </b> </button>
-                        <hr class="hr">
-                        <button class="sair" onclick="confirmarSaida()"> <b> SAIR </b> </button>
                     </ul>
                     <ul class="ul2">
                         <li class="mae">
