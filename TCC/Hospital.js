@@ -54,35 +54,35 @@ document.getElementById('onoff2').addEventListener('change', function () {
     }
 });
 
-let sliderElement = document.querySelector("#slider");
-let buttonElement = document.querySelector("#button");
+// let sliderElement = document.querySelector("#slider");
+// let buttonElement = document.querySelector("#button");
 
-let sizeProtocolo = document.querySelector("#valor");
-let protocolo = document.querySelector("#protocolo");
+// let sizeProtocolo = document.querySelector("#valor");
+// let protocolo = document.querySelector("#protocolo");
 
-let containerProtocolo = document.querySelector("#container-protocolo");
+// let containerProtocolo = document.querySelector("#container-protocolo");
 
-let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!';
-let novoProtocolo = '';
+// let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!';
+// let novoProtocolo = '';
 
-sizeProtocolo.innerHTML = sliderElement.value;
+// sizeProtocolo.innerHTML = sliderElement.value;
 
-slider.oninput = function () {
-    sizeProtocolo.innerHTML = this.value;
-}
+// slider.oninput = function () {
+//     sizeProtocolo.innerHTML = this.value;
+// }
 
-function gerarProtocolo() {
+// function gerarProtocolo() {
 
-    let pass = ''; // id + protocolo gerado
-    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
-        pass += charset.charAt(Math.floor(Math.random() * n));
-    }
+//     let pass = ''; // id + protocolo gerado
+//     for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+//         pass += charset.charAt(Math.floor(Math.random() * n));
+//     }
 
-    console.log(pass)
-    containerProtocolo.classList.remove("hide");
-    protocolo.innerHTML = pass;
-    novoProtocolo = pass;
-}
+//     console.log(pass)
+//     containerProtocolo.classList.remove("hide");
+//     protocolo.innerHTML = pass;
+//     novoProtocolo = pass;
+// }
 
 function copiarProtocolo() {
     alert("Protocolo copiado com sucesso!")
