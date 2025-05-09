@@ -90,10 +90,14 @@
                         <li class="tipoSanguineo">
                             <p>Tipo sanguíneo/Fator RH</p>
                         </li>
-                        <button type="submit" id="salvarIMG" class="salvarIMG" onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png" width="15px"></button>
-                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b> SALVAR </b> </button>
+                        <button type="submit" id="salvarIMG" class="salvarIMG"
+                            onclick="gerarProtocolo(); salvar();"><img class="img" src="img/Salvar.png"
+                                width="15px"></button>
+                        <button type="submit" id="salvar" class="salvar" onclick="gerarProtocolo(); salvar();"> <b>
+                                SALVAR </b> </button>
                         <hr class="hr">
-                        <button type="submit" class="deletarIMG" onclick="deletar()"><img class="img" src="img/Deletar.png" width="10px"></button>
+                        <button type="submit" class="deletarIMG" onclick="deletar()"><img class="img"
+                                src="img/Deletar.png" width="10px"></button>
                         <button type="submit" class="deletar" onclick="deletar()"> <b> DELETAR </b> </button>
                     </ul>
                     <ul class="ul2">
@@ -128,7 +132,15 @@
                             <p id="criança"></p>
                         </li>
                         <li class="tipoFilho">
-                            <p id="tipagemCriança"></p>
+                            <table>
+                                <tbody id="tipagemCriança">
+                                    <tr>
+                                        <td class="tipagemCriança">Tipagem sanguínea: <br> 25% de chance de ser A <br>
+                                            25% de chance de ser B <br> 50% de chance de ser AB <br><br> Fator RH: <br>
+                                            50% de chance de ser + <br> 50% de chance de ser -</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </li>
                     </ul>
 
@@ -156,7 +168,7 @@
                                 <table>
                                     <tbody id="doador1">
                                         <tr>
-                                            <td class="doador1">Se for O+: O+</td>
+                                            <td class="doador1">Se for A-: A-, A+, AB-</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -165,7 +177,7 @@
                                 <table>
                                     <tbody id="doação1">
                                         <tr>
-                                            <td class="doação1">Se for O+: O+</td>
+                                            <td class="doação1">Se for A-: A-, O-</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -177,7 +189,7 @@
                                 <table>
                                     <tbody id="doador1">
                                         <tr>
-                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                            <td class="doador1">Se for A+: A+, AB+ </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -186,7 +198,7 @@
                                 <table>
                                     <tbody id="doação1">
                                         <tr>
-                                            <td class="doação1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                            <td class="doação1">Se for A+: A+, A-, O+, O- </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -198,7 +210,7 @@
                                 <table>
                                     <tbody id="doador1">
                                         <tr>
-                                            <td class="doador1">Se for B+: B+</td>
+                                            <td class="doador1">Se for B-: B-, B+, AB-, AB+ </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -207,7 +219,7 @@
                                 <table>
                                     <tbody id="doação1">
                                         <tr>
-                                            <td class="doação1">Se for B+: B+</td>
+                                            <td class="doação1">Se for B-: B-, O- </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -219,7 +231,49 @@
                                 <table>
                                     <tbody id="doador1">
                                         <tr>
-                                            <td class="doador1">Se for AB+: A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+                                            <td class="doador1">Se for B+: B+, AB+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for B+: B-, B+, O-, O+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB-: AB-, AB+</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li id="tipagem3" class="tipagem3">
+                                <table>
+                                    <tbody id="doação1">
+                                        <tr>
+                                            <td class="doação1">Se for AB-: A-, B-, AB-, O-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                        <ul id="ul2" class="ul2">
+                            <li id="tipagem2" class="tipagem2">
+                                <table>
+                                    <tbody id="doador1">
+                                        <tr>
+                                            <td class="doador1">Se for AB+: AB+</td>
                                         </tr>
                                     </tbody>
                                 </table>
