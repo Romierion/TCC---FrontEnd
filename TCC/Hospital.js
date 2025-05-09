@@ -99,6 +99,6 @@ function confirmarSaida() {
 function deletar() {
     var deleta = confirm("Tem certeza que deseja deletar o arquivo?");
     if (deleta) {
-        alert("Aquivo deletado!");
+        alert("Arquivo deletado!");
     }
 }
