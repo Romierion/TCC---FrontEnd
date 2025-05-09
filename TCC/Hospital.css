@@ -145,6 +145,12 @@ body {
     border-top: none;
 }
 
+.tipagemCriança{
+    width: 22%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
 .crianca {
     text-align: center;
     padding: 7px;
